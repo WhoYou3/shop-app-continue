@@ -1,0 +1,48 @@
+.specificProduct {
+  border: 1px green solid;
+  background-color: #d87d4a;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.specificProduct img {
+  position: absolute;
+  height: 120px;
+  top: 60px;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+.description {
+  border: 1px black solid;
+  height: clamp(300px, 50%, 400px);
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  color: #ffffff;
+}
+
+.description h3 {
+  font-size: clamp(2.7rem, 6vh, 2.9rem);
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+.description p {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.description button {
+  color: black;
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
+.description button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
