@@ -1,5 +1,5 @@
 import React from "react";
-import Product from "./Product";
+import KindOfProduct from "./KindOfProduct";
 import classes from "./SectionProducts.module.css";
 import earphonesPNG from "../../images/image-category-thumbnail-earphones.png";
 import headphonesPNG from "../../images/image-category-thumbnail-headphones.png";
@@ -11,14 +11,23 @@ const KINDOFPRODUCTS = {
   SPEAKERS: "SPEAKERS",
 };
 
-function SectionProducts(props) {
+function SectionKidOfProducts(props) {
   return (
     <section className={classes.sectionProduct}>
-      <Product img={headphonesPNG} kindOfProduct={KINDOFPRODUCTS.HEADPHONES} />
-      <Product img={earphonesPNG} kindOfProduct={KINDOFPRODUCTS.EARPHONES} />
-      <Product img={speakersPNG} kindOfProduct={KINDOFPRODUCTS.SPEAKERS} />
+      <KindOfProduct
+        img={headphonesPNG}
+        kindOfProduct={KINDOFPRODUCTS.HEADPHONES}
+      />
+      <KindOfProduct
+        img={earphonesPNG}
+        kindOfProduct={KINDOFPRODUCTS.EARPHONES}
+      />
+      <KindOfProduct
+        img={speakersPNG}
+        kindOfProduct={KINDOFPRODUCTS.SPEAKERS}
+      />
     </section>
   );
 }
 
-export default SectionProducts;
+export default SectionKidOfProducts;

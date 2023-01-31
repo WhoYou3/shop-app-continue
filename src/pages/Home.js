@@ -1,12 +1,14 @@
 import React from "react";
 import SectionMain from "../components/Home/SectionMain";
-import SectionProducts from "../components/Home/SectionProducts";
+import SectionKindOfProducts from "../components/Home/SectionKindOfProducts";
+import SectionSpecificProduct from "../components/Home/SectionSpecificProduct";
 
 function Home(props) {
   return (
     <div>
       <SectionMain />
-      <SectionProducts />
+      <SectionKindOfProducts />
+      <SectionSpecificProduct />
     </div>
   );
 }

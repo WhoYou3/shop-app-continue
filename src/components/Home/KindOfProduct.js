@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { GoArrowSmallRight } from "react-icons/go";
 import classes from "./Product.module.css";
-import jpg from "../../images/image-category-thumbnail-earphones.png";
 
 function Product(props) {
   return (
