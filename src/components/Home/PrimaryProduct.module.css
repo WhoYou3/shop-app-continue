@@ -1,5 +1,4 @@
 .specificProduct {
-  border: 1px green solid;
   background-color: #d87d4a;
   position: relative;
   display: flex;
@@ -8,15 +7,15 @@
 
 .specificProduct img {
   position: absolute;
-  height: 120px;
-  top: 60px;
+  height: 140px;
+  top: 15px;
 
   left: 50%;
   transform: translateX(-50%);
 }
 .description {
-  border: 1px black solid;
-  height: clamp(300px, 50%, 400px);
+  height: clamp(280px, 50%, 400px);
+  width: clamp(300px, 35vw, 400px);
   position: absolute;
   bottom: 5%;
   display: flex;
@@ -30,14 +29,15 @@
 .description h3 {
   font-size: clamp(2.7rem, 6vh, 2.9rem);
   letter-spacing: 1.5px;
-  font-weight: 500;
+  font-weight: 700;
 }
 .description p {
   font-weight: 500;
   font-size: 0.9rem;
 }
 .description button {
-  color: black;
+  background-color: black;
+  color: white;
   font-weight: 100;
   font-size: 0.9rem;
 }
@@ -45,4 +45,30 @@
 .description button:hover {
   cursor: pointer;
   opacity: 0.7;
+}
+
+@media (min-width: 1024px) {
+  .description {
+    bottom: 20%;
+    right: 10%;
+    text-align: start;
+    align-items: flex-start;
+  }
+  .description button {
+    align-self: flex-start;
+  }
+
+  .specificProduct img {
+    bottom: -20px;
+    top: auto;
+    height: auto;
+    left: 20%;
+    clip: rect(0, auto, 370px, 0);
+  }
+}
+
+@media (min-width: 1200px) {
+  .specificProduct img {
+    left: 30%;
+  }
 }

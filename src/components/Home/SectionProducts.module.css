@@ -6,7 +6,6 @@
   align-items: center;
   gap: 50px;
   margin-top: 10%;
-  border: 1px red solid;
 }
 
 @media (min-width: 700px) {

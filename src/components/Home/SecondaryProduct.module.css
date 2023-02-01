@@ -1,0 +1,46 @@
+.secondaryProduct {
+  background: url("../../images/MOBILE/image-speaker-zx7.jpg");
+  background-size: 100% 100%;
+  background-position: 100%;
+  background-repeat: none;
+
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  width: fit-content;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 6vw;
+}
+
+.description h3 {
+  font-size: clamp(20px, 3vh, 32px);
+  letter-spacing: 4px;
+}
+
+.description button {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px black solid;
+  color: black;
+  font-weight: 400;
+}
+
+@media (min-width: 600px) {
+  .secondaryProduct {
+    background: url("../../images/TABLET/image-speaker-zx7.jpg");
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1000px) {
+  .secondaryProduct {
+    background: url("../../images//DESKTOP/image-speaker-zx7.jpg");
+    background-size: cover;
+    background-position: top;
+  }
+}

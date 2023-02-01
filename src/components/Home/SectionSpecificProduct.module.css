@@ -1,12 +1,22 @@
 .sectionSpecificProduct {
-  border: 1px red solid;
-
   width: 80%;
   min-width: 200px;
   margin: auto;
   margin-top: clamp(60px, 8%, 110px);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 600px 320px 420px;
+  grid-template-rows: 450px 260px 330px;
   gap: 3%;
+}
+
+@media (min-width: 700px) {
+  .sectionSpecificProduct {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .sectionSpecificProduct {
+    width: 75%;
+  }
 }
