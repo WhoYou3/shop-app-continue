@@ -1,0 +1,89 @@
+.navFooterContainer {
+  background-color: #101010;
+  margin-top: 30px;
+}
+
+.navFooter {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+
+  text-align: center;
+
+  height: 600px;
+}
+
+.navFooter h2 {
+  font-weight: 700;
+}
+
+.navFooter ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+}
+
+.navFooter ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+}
+
+.navFooter p {
+  opacity: 0.6;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.navFooter ul li a :hover {
+  cursor: pointer;
+}
+
+.iconsContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.iconsContainer svg {
+  cursor: pointer;
+}
+
+@media (min-width: 650px) {
+  .navFooterContainer {
+  }
+  .navFooter {
+    align-items: flex-start;
+    height: 300px;
+    text-align: start;
+  }
+
+  .navFooter ul {
+    flex-direction: row;
+
+    gap: 30px;
+    height: fit-content;
+  }
+  .iconsContainer {
+    align-self: flex-end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navFooter {
+    width: 65%;
+  }
+  .navFooter ul {
+    align-self: flex-end;
+  }
+  .navFooter p {
+    width: 500px;
+  }
+}
