@@ -25,11 +25,8 @@ export default function SpecificProduct(props) {
       )}
 
       <div className={classes.description}>
-        <h3>ZX9 SPEAKER</h3>
-        <p>
-          Uprade to premium speakers that are phenomenally built to deliver
-          truly remarkable sound
-        </p>
+        <h3>{props.product}</h3>
+        <p>{props.descrip}</p>
         <Button />
       </div>
     </div>

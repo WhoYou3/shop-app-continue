@@ -1,0 +1,60 @@
+.advert {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.advert img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.advert span {
+  color: #d87d4a;
+}
+
+.advert p {
+  opacity: 0.7;
+}
+
+.advert h3 {
+  font-size: clamp(20px, 3vh, 32px);
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+
+@media (min-width: 700px) {
+  .advert {
+    width: 90%;
+  }
+
+  .advert h3 {
+    font-size: clamp(20px, 6vh, 40px);
+  }
+
+  .advert img {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .advert {
+    width: 75%;
+    flex-direction: row-reverse;
+  }
+  .advert img {
+    width: 40%;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    text-align: start;
+    width: 500px;
+  }
+}

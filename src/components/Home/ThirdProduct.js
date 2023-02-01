@@ -8,7 +8,7 @@ export default function ThirdProduct(props) {
     <div className={classes.thirdProduct}>
       <img src={earphoneJPG} alt="product earphones"></img>
       <div className={classes.description}>
-        <h3>YX1 EARPHONES</h3>
+        <h3>{props.product}</h3>
         <Button />
       </div>
     </div>
