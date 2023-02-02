@@ -1,0 +1,12 @@
+.products {
+  height: 140px;
+  background: black;
+  margin-top: 0;
+  transform: translateY(-5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 30px;
+}

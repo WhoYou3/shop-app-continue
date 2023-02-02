@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
+  position: relative;
 
   width: 100%;
   position: relative;
@@ -42,8 +43,11 @@
 }
 
 .breakline {
-  height: 2px;
-  background-color: rgba(243, 231, 231, 0.5);
+  height: 0.5px;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  position: relative;
+  z-index: 1;
 }
 
 .closeIcon {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import classes from "./Navbar.module.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FiShoppingCart } from "react-icons/fi";
@@ -7,6 +7,7 @@ import { AiOutlineClose } from "react-icons/ai";
 
 function Navbar(props) {
   const [isMenu, setIsMenu] = useState(false);
+  let param = useParams();
 
   const showMenu = () => {
     setIsMenu(true);
@@ -14,7 +15,10 @@ function Navbar(props) {
 
   return (
     <>
-      <nav className={classes.navbar}>
+      <nav
+        style={{ backgroundColor: param.products ? "black" : "" }}
+        className={classes.navbar}
+      >
         <RxHamburgerMenu
           className={classes.iconMenu}
           onClick={showMenu}
