@@ -3,6 +3,8 @@ import { Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setWidth as widthSetting } from "../store/ScreenWidthSlice";
+
+import AnimatedPage from "./AnimatedPage";
 import Advert from "../components/Footer/Advert";
 import NavFooter from "../components/Footer/NavFooter";
 import Navbar from "../components/Navbar/Navbar";

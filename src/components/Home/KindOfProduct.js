@@ -9,9 +9,14 @@ function Product(props) {
       <img src={props.img} alt="product"></img>
       <div className={classes.description}>
         <p>{props.kindOfProduct}</p>
-        <Link>
-          SHOP
+        <Link
+          onClick={() =>
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+          }
+          to={`/${props.kindOfProduct.toLowerCase()}`}
+        >
           <span>
+            SHOP
             <GoArrowSmallRight />
           </span>
         </Link>

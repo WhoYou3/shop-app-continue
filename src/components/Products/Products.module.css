@@ -1,5 +1,4 @@
 .productContainer {
-  border: 1px black solid;
   width: 80%;
   margin: auto;
   margin-bottom: 60px;
@@ -15,7 +14,6 @@
 }
 
 .description {
-  border: 1px red solid;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -53,14 +51,22 @@
     width: 75%;
     flex-direction: row;
     height: 560px;
+    justify-content: space-around;
   }
 
   .productContainer img {
-    border: 1px red solid;
-    height: 80%;
+    height: clamp(200px, 90%, 450px);
   }
 
   .description {
-    width: 50%;
+    width: clamp(450px, 45%, 500px);
+    height: 65%;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .description h2 {
+    font-size: 2.5rem;
   }
 }
