@@ -42,6 +42,25 @@
   color: white;
 }
 
+.navLinks {
+  list-style: none;
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  order: 1;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: white;
+}
+
+.navLinks li a:hover,
+.navLinks li a:active,
+.navLinks li a.active {
+  color: #d87d4a;
+}
+
 .breakline {
   height: 0.5px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -68,6 +87,7 @@
 
 .iconShop {
   transition: 1s;
+  order: 2;
 }
 .iconShop:hover {
   color: orange;

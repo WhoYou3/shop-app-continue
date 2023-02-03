@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
 
 import Button from "../UI/Button";
 import classes from "./Products.module.css";
@@ -7,13 +8,20 @@ import classes from "./Products.module.css";
 function Product(props) {
   const widthChecker = useSelector((state) => state.width);
   console.log(props.reverse);
+  console.log(props.path);
 
   return (
-    <div
+    <motion.div
       className={classes.productContainer}
-      style={{ flexDirection: props.reverse ? "row-reverse" : "" }}
+      initial={{ opacity: 0, x: 100 }}
+      animate={{ opacity: 1, x: 0, transition: { delay: 0.5 } }}
+      exit={{ opacity: 0, transition: { dutarion: 5 } }}
+      style={{
+        flexDirection:
+          props.reverse && widthChecker.value > 1024 ? "row-reverse" : "",
+      }}
     >
-      {widthChecker < 1024 ? (
+      {widthChecker.value < 1024 ? (
         <img src={props.imgMOBILE} alt="product"></img>
       ) : (
         <img src={props.imgDESKTOP} alt="product"></img>
@@ -24,9 +32,9 @@ function Product(props) {
         </p>
         <h2>{props.product}</h2>
         <p>{props.description}</p>
-        <Button />
+        <Button navigate={props.path} />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

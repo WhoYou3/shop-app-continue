@@ -21,7 +21,7 @@ export default function SpecificProduct(props) {
       <div className={classes.description}>
         <h3>{props.product}</h3>
         <p>{props.descrip}</p>
-        <Button />
+        <Button navigate="/speakers/ZX9" />
       </div>
     </div>
   );

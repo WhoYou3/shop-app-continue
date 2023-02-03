@@ -1,7 +1,7 @@
 .advert {
   width: 80%;
   margin: auto;
-  margin-top: 25px;
+  margin-top: clamp(25px, 7vh, 70px);
   display: flex;
   flex-direction: column;
   gap: 20px;

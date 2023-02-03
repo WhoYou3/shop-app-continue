@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 import classes from "./Navbar.module.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FiShoppingCart } from "react-icons/fi";
@@ -8,6 +9,7 @@ import { AiOutlineClose } from "react-icons/ai";
 function Navbar(props) {
   const [isMenu, setIsMenu] = useState(false);
   let param = useParams();
+  const widthChecker = useSelector((state) => state.width.value);
 
   const showMenu = () => {
     setIsMenu(true);
@@ -19,11 +21,69 @@ function Navbar(props) {
         style={{ backgroundColor: param.products ? "black" : "" }}
         className={classes.navbar}
       >
-        <RxHamburgerMenu
-          className={classes.iconMenu}
-          onClick={showMenu}
-          size={"2rem"}
-        />
+        {widthChecker < 1024 ? (
+          <RxHamburgerMenu
+            className={classes.iconMenu}
+            onClick={showMenu}
+            size={"2rem"}
+          />
+        ) : (
+          <ul className={classes.navLinks}>
+            <li>
+              <NavLink
+                onClick={() =>
+                  window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+                }
+                to="/"
+                className={(navData) =>
+                  navData.isActive ? classes.active : ""
+                }
+              >
+                HOME
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                onClick={() =>
+                  window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+                }
+                to="/headphones"
+                className={(navData) =>
+                  navData.isActive ? classes.active : ""
+                }
+              >
+                HEADPHONES
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                onClick={() =>
+                  window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+                }
+                to="/speakers"
+                className={(navData) =>
+                  navData.isActive ? classes.active : ""
+                }
+              >
+                SPEAKERS
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                onClick={() =>
+                  window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+                }
+                to="/earphones"
+                className={(navData) =>
+                  navData.isActive ? classes.active : ""
+                }
+              >
+                EARPHONES
+              </NavLink>
+            </li>
+          </ul>
+        )}
+
         <h2>audiophile</h2>
         <FiShoppingCart className={classes.iconShop} size={"2rem"} />
       </nav>

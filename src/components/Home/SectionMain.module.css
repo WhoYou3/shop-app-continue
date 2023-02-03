@@ -15,6 +15,10 @@
   z-index: -1;
 }
 
+.sectionMain button:hover {
+  cursor: pointer;
+}
+
 .description {
   margin-top: 100px;
   height: 60%;

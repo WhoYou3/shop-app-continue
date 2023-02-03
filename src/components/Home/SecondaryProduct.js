@@ -7,7 +7,7 @@ export default function SecondaryProduct(props) {
     <div className={classes.secondaryProduct}>
       <div className={classes.description}>
         <h3>{props.product}</h3>
-        <Button />
+        <Button navigate="/speakers/ZX7" />
       </div>
     </div>
   );

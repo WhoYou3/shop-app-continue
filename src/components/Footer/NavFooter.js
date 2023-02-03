@@ -12,16 +12,48 @@ export default function NavFooter() {
         <h2>audiophile</h2>
         <ul>
           <li>
-            <NavLink>HOME</NavLink>
+            <NavLink
+              onClick={() =>
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+              }
+              to="/"
+              className={(navData) => (navData.isActive ? classes.active : "")}
+            >
+              HOME
+            </NavLink>
           </li>
           <li>
-            <NavLink>HEADPHONES</NavLink>
+            <NavLink
+              onClick={() =>
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+              }
+              to="/headphones"
+              className={(navData) => (navData.isActive ? classes.active : "")}
+            >
+              HEADPHONES
+            </NavLink>
           </li>
           <li>
-            <NavLink>SPEAKERS</NavLink>
+            <NavLink
+              onClick={() =>
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+              }
+              to="/speakers"
+              className={(navData) => (navData.isActive ? classes.active : "")}
+            >
+              SPEAKERS
+            </NavLink>
           </li>
           <li>
-            <NavLink>EARPHONES</NavLink>
+            <NavLink
+              onClick={() =>
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+              }
+              to="/earphones"
+              className={(navData) => (navData.isActive ? classes.active : "")}
+            >
+              EARPHONES
+            </NavLink>
           </li>
         </ul>
         <p>

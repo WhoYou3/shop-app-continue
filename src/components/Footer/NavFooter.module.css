@@ -36,6 +36,16 @@
   font-size: 14px;
   letter-spacing: 1.5px;
 }
+.nav .navbarLinks ul li a:active,
+.nav .navbarLinks ul li a.active {
+  border-bottom: 5px white solid;
+}
+
+.navFooter ul li a:hover,
+.navFooter ul li a:active,
+.navFooter ul li a.active {
+  color: #d87d4a;
+}
 
 .navFooter p {
   opacity: 0.6;

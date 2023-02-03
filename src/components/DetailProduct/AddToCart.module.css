@@ -1,0 +1,27 @@
+.addToCart {
+  display: flex;
+  gap: 30px;
+}
+
+.addToCart input {
+  width: 30%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.btn {
+  height: clamp(50px, 4vh, 250px);
+  width: clamp(160px, 5vw, 300px);
+  border: none;
+  border-radius: 10px;
+  background-color: orange;
+  color: #ffff;
+  font-weight: 700;
+  font-size: 18px;
+  align-self: center;
+}
+
+.btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
