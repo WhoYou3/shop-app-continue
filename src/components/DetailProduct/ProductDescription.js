@@ -1,15 +1,29 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { motion } from "framer-motion";
-import classes from "./ProductDescription.module.css";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { motion } from "framer-motion";
 import AddToCart from "./AddToCart";
+import { setProductToList } from "../../store/CartProductListSlice";
+import classes from "./ProductDescription.module.css";
 
 export default function ProductDescription(props) {
   const widthChecker = useSelector((state) => state.width);
+  const dispatch = useDispatch();
   const param = useParams();
-  console.log(param);
+
+  const createProductObject = (count) => {
+    console.log("tutaj");
+    const product = {
+      product: props.product,
+      cost: props.cost * count,
+      short: props.short,
+      image: props.imgMOBILE,
+      count: +count,
+    };
+    console.log(product.cost);
+    dispatch(setProductToList(product));
+  };
 
   return (
     <>
@@ -36,7 +50,7 @@ export default function ProductDescription(props) {
           <h2>{props.product}</h2>
           <p>{props.description}</p>
           <p className={classes.cost}>${props.cost}</p>
-          <AddToCart />
+          <AddToCart createProductHandler={createProductObject} />
         </div>
       </motion.div>
     </>

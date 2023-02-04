@@ -1,19 +1,29 @@
 import React, { useState } from "react";
 import { Link, useParams, NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setCart } from "../../store/CartToggleSlice";
 import classes from "./Navbar.module.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FiShoppingCart } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
+import Cart from "../Cart/Cart";
 
 function Navbar(props) {
   const [isMenu, setIsMenu] = useState(false);
+
   let param = useParams();
   const widthChecker = useSelector((state) => state.width.value);
+  const cartShower = useSelector((state) => state.cart.value);
+  const dispatch = useDispatch();
 
   const showMenu = () => {
     setIsMenu(true);
   };
+
+  const showCart = () => {
+    dispatch(setCart());
+  };
+  console.log(cartShower);
 
   return (
     <>
@@ -84,8 +94,12 @@ function Navbar(props) {
           </ul>
         )}
 
-        <h2>audiophile</h2>
-        <FiShoppingCart className={classes.iconShop} size={"2rem"} />
+        <Link to="/">
+          <h2>audiophile</h2>
+        </Link>
+        <Link onClick={showCart} className={classes.iconLink}>
+          <FiShoppingCart className={classes.iconShop} size={"2rem"} />
+        </Link>
       </nav>
       <div className={classes.breakline}></div>
 
@@ -102,6 +116,7 @@ function Navbar(props) {
           </div>
         </>
       )}
+      {cartShower && <Cart />}
     </>
   );
 }

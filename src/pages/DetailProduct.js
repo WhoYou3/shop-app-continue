@@ -21,6 +21,7 @@ export default function DetailProduct() {
             imgDESKTOP={headphone.imgDESKTOP}
             imgMOBILE={headphone.imgMOBILE}
             cost={headphone.cost}
+            short={headphone.shortName}
           />
         );
       }
@@ -37,6 +38,7 @@ export default function DetailProduct() {
             imgDESKTOP={earphone.imgDESKTOP}
             imgMOBILE={earphone.imgMOBILE}
             cost={earphone.cost}
+            short={earphone.shortName}
           />
         );
       }
@@ -53,6 +55,7 @@ export default function DetailProduct() {
             imgDESKTOP={speakers.imgDESKTOP}
             imgMOBILE={speakers.imgMOBILE}
             cost={speakers.cost}
+            short={speakers.shortName}
           />
         );
       }

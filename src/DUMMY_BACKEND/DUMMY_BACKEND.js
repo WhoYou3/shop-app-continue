@@ -15,66 +15,72 @@ const DUMMY_BACKEND = {
   HEADPHONES: [
     {
       path: "XX99MARKII",
+      shortName: "XX99 MK II",
       product: "XX99 MARK II HEADPHONES",
       description:
         "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
       imgMOBILE: headphonesIIJPG,
       imgDESKTOP: headphonesIIJPGDESKTOP,
-      cost: 2.999,
+      cost: 2999,
       id: 1,
     },
     {
       path: "XX99MARKI",
       product: "XX99 MARK I HEADPHONES",
+      shortName: "XX99 M I",
       description:
         " As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.",
       imgMOBILE: headphonesIJPG,
       imgDESKTOP: headphonesIJPGDESKTOP,
-      cost: 2.35,
+      cost: 2350,
       id: 2,
     },
     {
       path: "XX59",
       product: "XX59 Headphones",
+      shortName: "XX59",
       description:
         "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
       imgMOBILE: headphonesXX59JPG,
       imgDESKTOP: headphonesXX59JPGDESKTOP,
-      cost: 1.45,
+      cost: 1450,
       id: 3,
     },
   ],
   EARPHONES: [
     {
       path: "YX1",
+      shortName: "YX1",
       product: "YX1 Wireless Earphones",
       description:
         "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
       imgMOBILE: earphonesYX1JPG,
       imgDESKTOP: earphonesYX1JPGDESKTOPM,
-      cost: 1.185,
+      cost: 1185,
       id: 4,
     },
   ],
   SPEAKERS: [
     {
       path: "ZX7",
+      shortName: "ZX7",
       product: "ZX7 Speaker",
       description:
         "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
       imgMOBILE: spekearZX7JPG,
       imgDESKTOP: spekaerZX7JPGDESKTOP,
-      cost: 2.509,
+      cost: 2509,
       id: 5,
     },
     {
       path: "ZX9",
+      shortName: "ZX9",
       product: "ZX9 Speaker",
       description:
         "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
       imgMOBILE: speakerZX9JPG,
       imgDESKTOP: speakerZX9JPGDESKTOP,
-      cost: 3.215,
+      cost: 3215,
       id: 6,
     },
   ],
