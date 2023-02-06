@@ -15,9 +15,30 @@ export const CartProductListSlice = createSlice({
         state.value[existingProductIndex].cost += +action.payload.cost;
       }
     },
+    incrementProducts: (state, action) => {
+      const existingProductIndex = state.value.findIndex(
+        (product) => product.short === action.payload.short
+      );
+      state.value[existingProductIndex].count += 1;
+      state.value[existingProductIndex].cost += action.payload.singleCost;
+    },
+    decrementProducts: (state, action) => {
+      const existingProductIndex = state.value.findIndex(
+        (product) => product.short === action.payload.short
+      );
+      state.value[existingProductIndex].count -= 1;
+      state.value[existingProductIndex].cost -= action.payload.singleCost;
+      if (state.value[existingProductIndex].count < 1) {
+        console.log("tutaj test");
+        state.value = state.value.filter(
+          (element, index) => index !== existingProductIndex
+        );
+      }
+    },
   },
 });
 
 export default CartProductListSlice.reducer;
 
-export const { setProductToList } = CartProductListSlice.actions;
+export const { setProductToList, decrementProducts, incrementProducts } =
+  CartProductListSlice.actions;

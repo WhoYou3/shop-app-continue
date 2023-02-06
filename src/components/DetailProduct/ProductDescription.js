@@ -17,6 +17,7 @@ export default function ProductDescription(props) {
     const product = {
       product: props.product,
       cost: props.cost * count,
+      singleCost: props.cost,
       short: props.short,
       image: props.imgMOBILE,
       count: +count,

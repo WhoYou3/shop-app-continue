@@ -3,6 +3,7 @@ body {
   grid-template-rows: auto 1px auto;
   height: 100%;
   font-family: "Manrope", sans-serif;
+  overflow-x: hidden;
 }
 
 * {

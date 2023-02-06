@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { Link, useParams, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { setCart } from "../../store/CartToggleSlice";
-import classes from "./Navbar.module.css";
+import { motion } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FiShoppingCart } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
+import classes from "./Navbar.module.css";
 import Cart from "../Cart/Cart";
 
 function Navbar(props) {
@@ -14,6 +15,8 @@ function Navbar(props) {
   let param = useParams();
   const widthChecker = useSelector((state) => state.width.value);
   const cartShower = useSelector((state) => state.cart.value);
+  const cartList = useSelector((state) => state.productsList.value);
+  const quantityProducts = useSelector((state) => state.quantityProducts.value);
   const dispatch = useDispatch();
 
   const showMenu = () => {
@@ -23,7 +26,6 @@ function Navbar(props) {
   const showCart = () => {
     dispatch(setCart());
   };
-  console.log(cartShower);
 
   return (
     <>
@@ -99,6 +101,16 @@ function Navbar(props) {
         </Link>
         <Link onClick={showCart} className={classes.iconLink}>
           <FiShoppingCart className={classes.iconShop} size={"2rem"} />
+          {cartList.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, scale: 1.5 }}
+              animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
+              exit={{ opacity: 0 }}
+              className={classes.shopQuantity}
+            >
+              {quantityProducts}
+            </motion.div>
+          )}
         </Link>
       </nav>
       <div className={classes.breakline}></div>

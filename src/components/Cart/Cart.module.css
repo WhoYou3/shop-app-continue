@@ -11,16 +11,124 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 .cartContainer {
-  border: 1px red solid;
-  width: 80%;
+  width: clamp(200px, 80%, 350px);
 
   height: 450px;
   background-color: white;
   border-radius: 10px;
   padding: 20px;
+  overflow-y: auto;
+}
+
+.cartCount {
+  display: flex;
+  justify-content: space-between;
 }
 
 .cart {
   display: flex;
+
+  width: 100%;
+
+  position: relative;
+}
+
+.productsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.productsList li {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.productsList img {
+  height: 80px;
+  aspect-ratio: 1/1;
+  margin-right: 10px;
+}
+
+.productsList .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.description span {
+  font-weight: 700;
+}
+
+.inputContainer {
+  display: flex;
+  height: 30px;
+  justify-self: flex-end;
+  align-self: center;
+
+  position: absolute;
+  right: 0;
+}
+.inputContainer div {
+  height: 22px;
+  border: 1px black solid;
+  width: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.inputContainer div:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.inputContainer input {
+  width: 40px;
+  height: 22px;
+  border: 1px black solid;
+
+  text-align: center;
+  font-weight: 700;
+}
+
+.cartSummary {
+  display: flex;
   justify-content: space-between;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.btnContainer button {
+  height: clamp(40px, 3vh, 250px);
+  width: clamp(160px, 5vw, 300px);
+  border: none;
+  border-radius: 10px;
+  background-color: orange;
+  color: #ffff;
+  font-weight: 700;
+  font-size: 18px;
+  align-self: center;
+}
+
+.btnContainer button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@media (min-width: 650px) {
+  .cartContainer {
+    position: absolute;
+    top: 120px;
+    right: 100px;
+  }
 }

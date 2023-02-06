@@ -92,6 +92,7 @@
 
 .iconLink {
   order: 2;
+  position: relative;
 }
 
 .iconShop {
@@ -101,6 +102,20 @@
 .iconShop:hover {
   color: orange;
   scale: 1.2;
+}
+.shopQuantity {
+  position: absolute;
+  height: 20px;
+  aspect-ratio: 1/1;
+  border: 1px orange solid;
+  border-radius: 50%;
+  text-align: center;
+  background-color: orange;
+  top: -10px;
+  right: -15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes showMenu {
