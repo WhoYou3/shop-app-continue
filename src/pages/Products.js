@@ -3,19 +3,6 @@ import { useParams } from "react-router-dom";
 import classes from "./Products.module.css";
 import Product from "../components/Products/Product";
 import SectionKidOfProducts from "../components/Home/SectionKindOfProducts";
-import headphonesIIJPG from "../../src/images/MOBILE/image-headphones-two.jpg";
-import headphonesIIJPGDESKTOP from "../../src/images/DESKTOP/image-headphones-two-desktop.jpg";
-import headphonesIJPG from "../images/MOBILE/image-headphones-one.jpg";
-import headphonesIJPGDESKTOP from "../images/DESKTOP/image-headphones-one-desktop.jpg";
-import headphonesXX59JPG from "../images/MOBILE/image-headphones-XX59.jpg";
-import headphonesXX59JPGDESKTOP from "../images/DESKTOP/image-headphones-XX59-desktop.jpg";
-import earphonesYX1JPG from "../images/MOBILE/image-earphones-yx11.jpg";
-import earphonesYX1JPGDESKTOPM from "../images/DESKTOP/image-earphones-yx11-desktop.jpg";
-import spekearZX7JPG from "../images/MOBILE/image-speaker-ZX77.jpg";
-import spekaerZX7JPGDESKTOP from "../images/DESKTOP/image-speaker-zx7Desktop.jpg";
-import speakerZX9JPG from "../images/MOBILE/image-speaker-zx9.jpg";
-import speakerZX9JPGDESKTOP from "../images/DESKTOP/image-speaker-zx9-desktop.jpg";
-import AnimatedPage from "./AnimatedPage";
 import DUMMY_BACKEND from "../DUMMY_BACKEND/DUMMY_BACKEND";
 
 function Products() {

@@ -5,12 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { setWidth as widthSetting } from "../store/ScreenWidthSlice";
 
 import Advert from "../components/Footer/Advert";
-import AnimatedPage from "./AnimatedPage";
 import NavFooter from "../components/Footer/NavFooter";
 import Navbar from "../components/Navbar/Navbar";
 import classes from "./Layout.module.css";
-import { useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
 
 function Layout(props) {
   const [width, setWidth] = useState(window.innerWidth);
