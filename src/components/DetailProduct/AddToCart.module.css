@@ -13,11 +13,10 @@
   width: 20px;
   border-radius: 50%;
   background-color: orange;
-  border: 1px red solid;
+
   position: absolute;
 }
 .buttonContainer {
-  border: 1px red solid;
   height: 100%;
   position: absolute;
   width: 100%;

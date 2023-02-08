@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 import { setCart } from "../../store/CartToggleSlice";
@@ -6,6 +7,7 @@ import { motion } from "framer-motion";
 import {
   incrementProducts,
   decrementProducts,
+  removeAll,
 } from "../../store/CartProductListSlice";
 import classes from "./Cart.module.css";
 
@@ -15,7 +17,6 @@ export default function Cart(props) {
 
   const productsCartList = useSelector((state) => state.productsList.value);
   const quantityProducts = useSelector((state) => state.quantityProducts.value);
-  console.log(quantityProducts);
 
   let totalPrize = 0;
 
@@ -25,7 +26,10 @@ export default function Cart(props) {
     }
   }
 
-  console.log(productsCartList);
+  const removeAllProducts = () => {
+    dispatch(removeAll());
+  };
+
   return (
     <div className={classes.background}>
       <motion.div
@@ -37,7 +41,9 @@ export default function Cart(props) {
         {" "}
         <div className={classes.cartCount}>
           <h3>CART ({quantityProducts})</h3>
-          <p>Remove all</p>
+          <button className={classes.btnRemove} onClick={removeAllProducts}>
+            Remove all
+          </button>
         </div>
         <ul className={classes.productsList}>
           {productsCartList.map((product) => (
@@ -78,7 +84,9 @@ export default function Cart(props) {
           </p>
         </div>
         <div className={classes.btnContainer}>
-          <button>CHECKOUT</button>
+          <Link to="/Checkout">
+            <button>CHECKOUT</button>
+          </Link>
           <button
             style={{
               color: "black",

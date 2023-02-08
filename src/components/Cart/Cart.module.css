@@ -61,6 +61,13 @@
   font-weight: 700;
 }
 
+.btnRemove {
+  border: none;
+  background-color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .inputContainer {
   display: flex;
   height: 30px;
@@ -105,7 +112,11 @@
   flex-direction: column;
 
   gap: 5px;
+
   margin-top: 10px;
+}
+.btnContainer a {
+  margin: auto;
 }
 
 .btnContainer button {

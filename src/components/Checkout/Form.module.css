@@ -1,0 +1,146 @@
+.checkoutContainer {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+}
+.checkoutContainer a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+.checkoutContainer a:hover {
+  color: #d87d4a;
+  cursor: pointer;
+}
+.checkoutContainer label {
+  display: block;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer h3 {
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+}
+
+.formContainer p {
+  color: #d87d4a;
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.formContainer form label {
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.formContainer form div.description {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer form div input {
+  width: clamp(200px, 80%, 300px);
+  height: 45px;
+  border-radius: 10px;
+  border: rgba(0, 0, 0, 0.6) 1px solid;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  outline-style: none;
+}
+
+.formContainer form div input:focus,
+.formContainer form div input:active {
+  border: 1px solid #d87d4a;
+}
+
+.paymentMethod {
+  border: 1px rgba(0, 0, 0, 0.5) solid;
+  width: 240px;
+  height: 45px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.paymentMethod:checked {
+  border-color: #d87d4a;
+}
+
+.paymentMethod p {
+  margin-bottom: 0;
+  color: black;
+  font-size: 16px;
+}
+.formContainer form div input.checkBoxInput {
+  height: 20px;
+  width: 20px;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .checkoutContainer {
+    width: 1000px;
+  }
+
+  .formContainer form div.description {
+    flex-direction: row;
+
+    width: 500px;
+    flex-wrap: wrap;
+  }
+
+  .formContainer form div.description input {
+    margin-right: 30px;
+  }
+  .formContainer form div.description input.addres {
+    width: 420px;
+  }
+  .formContainer form div.description p {
+    width: 100%;
+  }
+  .formContainer form div .inputContainer {
+    border: 1px blue;
+  }
+  .paymentMethod {
+    border: 1px rgba(0, 0, 0, 0.5) solid;
+    width: 240px;
+    height: 45px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .paymentMethod:checked {
+    border-color: #d87d4a;
+  }
+
+  .paymentMethod p {
+    margin-bottom: 0;
+    color: black;
+    font-size: 16px;
+  }
+  .formContainer form div input.checkBoxInput {
+    height: 20px;
+    width: 20px;
+    margin-bottom: 0;
+  }
+}

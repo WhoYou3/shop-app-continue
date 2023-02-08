@@ -1,10 +1,15 @@
 import React from "react";
 import classes from "./Advert.module.css";
 import advertJPG from "../../images/MOBILE/image-best-gear.jpg";
+import { useLocation } from "react-router-dom";
 
 export default function Advert() {
+  const location = useLocation();
   return (
-    <div className={classes.advert}>
+    <div
+      style={{ display: location.pathname === "/checkout" ? "none" : "" }}
+      className={classes.advert}
+    >
       <img src={advertJPG} alt="advert"></img>
       <div className={classes.description}>
         <h3>

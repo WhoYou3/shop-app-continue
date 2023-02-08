@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useParams, NavLink } from "react-router-dom";
+import { Link, useLocation, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { setCart } from "../../store/CartToggleSlice";
 import { motion } from "framer-motion";
@@ -12,7 +12,7 @@ import Cart from "../Cart/Cart";
 function Navbar(props) {
   const [isMenu, setIsMenu] = useState(false);
 
-  let param = useParams();
+  let location = useLocation();
   const widthChecker = useSelector((state) => state.width.value);
   const cartShower = useSelector((state) => state.cart.value);
   const cartList = useSelector((state) => state.productsList.value);
@@ -30,7 +30,9 @@ function Navbar(props) {
   return (
     <>
       <nav
-        style={{ backgroundColor: param.products ? "black" : "" }}
+        style={{
+          backgroundColor: location.pathname === "/" ? "" : "black",
+        }}
         className={classes.navbar}
       >
         {widthChecker < 1024 ? (
@@ -103,9 +105,9 @@ function Navbar(props) {
           <FiShoppingCart className={classes.iconShop} size={"2rem"} />
           {cartList.length > 0 && (
             <motion.div
-              initial={{ opacity: 0, scale: 1.5 }}
-              animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
-              exit={{ opacity: 0 }}
+              initial={{ scale: 1 }}
+              animate={{ scale: 1.2 }}
+              exit={{ opacity: 0.5, transition: { duration: 2 } }}
               className={classes.shopQuantity}
             >
               {quantityProducts}

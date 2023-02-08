@@ -35,10 +35,17 @@ export const CartProductListSlice = createSlice({
         );
       }
     },
+    removeAll: (state) => {
+      state.value = [];
+    },
   },
 });
 
 export default CartProductListSlice.reducer;
 
-export const { setProductToList, decrementProducts, incrementProducts } =
-  CartProductListSlice.actions;
+export const {
+  setProductToList,
+  decrementProducts,
+  incrementProducts,
+  removeAll,
+} = CartProductListSlice.actions;
