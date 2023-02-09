@@ -1,0 +1,92 @@
+.summaryProducts {
+  width: 90%;
+
+  margin: auto;
+  padding: 20px;
+}
+
+.summaryProducts img {
+  width: 100px;
+}
+
+.summaryProducts h3 {
+  font-size: 22px;
+}
+
+.summaryProducts ul {
+  list-style: none;
+}
+
+.summaryProducts li {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.summaryProducts div p {
+  font-weight: 700;
+}
+
+.summaryProducts div p span {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.summaryProducts p span.productCount {
+  position: absolute;
+  right: 10px;
+}
+.moneySummary {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.money {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.total {
+  margin-top: 20px;
+}
+
+.totalPrize {
+  color: #d87d4a !important;
+  font-weight: 700;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  height: 40px;
+}
+
+.summaryProducts button {
+  width: 100%;
+  background-color: #d87d4a;
+  color: white;
+  font-size: 14px;
+  border: none;
+}
+.summaryProducts button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .summaryProducts {
+    width: 300px;
+    position: absolute;
+    right: 0;
+    top: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .summaryProducts {
+    width: 400px;
+    right: 150px;
+  }
+}
