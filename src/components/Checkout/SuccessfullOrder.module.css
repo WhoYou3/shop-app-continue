@@ -1,0 +1,31 @@
+.succcessfullOrder {
+  height: 100vh;
+  width: 100vw;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.successfullOrderCart {
+  width: clamp(300px, 30%, 400px);
+  height: 60%;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+.successfullOrderCart h3 {
+  font-size: 30px;
+}
+.succcessfullOrderCart svg {
+  background-color: red;
+}

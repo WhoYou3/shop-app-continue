@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
@@ -12,7 +12,6 @@ import {
 import classes from "./Cart.module.css";
 
 export default function Cart(props) {
-  const [value, setValue] = useState(0);
   const dispatch = useDispatch();
 
   const productsCartList = useSelector((state) => state.productsList.value);
@@ -28,6 +27,7 @@ export default function Cart(props) {
 
   const removeAllProducts = () => {
     dispatch(removeAll());
+    localStorage.clear();
   };
 
   return (
@@ -85,7 +85,7 @@ export default function Cart(props) {
         </div>
         <div className={classes.btnContainer}>
           <Link to="/Checkout">
-            <button>CHECKOUT</button>
+            <button onClick={() => dispatch(setCart())}>CHECKOUT</button>
           </Link>
           <button
             style={{
@@ -93,7 +93,10 @@ export default function Cart(props) {
               border: "1px black solid",
               background: "white",
             }}
-            onClick={() => dispatch(setCart())}
+            onClick={() => {
+              dispatch(setCart());
+              document.body.style.overflow = "auto";
+            }}
           >
             Close
           </button>

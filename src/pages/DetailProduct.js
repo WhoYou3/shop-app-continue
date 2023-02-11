@@ -7,7 +7,6 @@ import classes from "./DetailProduct.module.css";
 
 export default function DetailProduct() {
   const param = useParams();
-  console.log(param.product + " " + param.products);
   let detailProduct;
 
   if (param.products === "headphones") {

@@ -28,6 +28,7 @@
   align-items: center;
   justify-content: center;
   color: black;
+  z-index: 30;
 
   background-color: rgba(0, 0, 0, 0.8);
 
@@ -41,10 +42,14 @@
   justify-content: space-between;
 }
 
-.menu ul li {
+.menu ul a {
   list-style: none;
   font-size: clamp(16px, 8vw, 35px);
   color: white;
+  text-decoration: none;
+}
+.menu ul li a {
+  text-decoration: none;
 }
 
 .navLinks {

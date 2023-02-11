@@ -13,10 +13,12 @@ function SectionMain(props) {
             Experience natural, lifelike audio and exceptional bulid quality
             made for the passionate music
           </p>
-          <Button navigate="/headphones/XX99MARKII" />
         </div>
       </section>
-      <div className={classes.container}></div>
+
+      <div className={classes.container}>
+        <Button navigate="/headphones/XX99MARKII" />
+      </div>
     </>
   );
 }

@@ -5,6 +5,7 @@ import SectionSpecificProduct from "../components/Home/SectionSpecificProduct";
 import { motion } from "framer-motion";
 
 function Home(props) {
+  document.body.style.overflow = "auto";
   return (
     <motion.div
       initial={{ opacity: 0 }}

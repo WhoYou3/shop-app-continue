@@ -7,8 +7,6 @@ import classes from "./Products.module.css";
 
 function Product(props) {
   const widthChecker = useSelector((state) => state.width);
-  console.log(props.reverse);
-  console.log(props.path);
 
   return (
     <motion.div

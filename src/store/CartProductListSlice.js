@@ -35,6 +35,9 @@ export const CartProductListSlice = createSlice({
         );
       }
     },
+    setProductsFromlocalStorage: (state, action) => {
+      state.value = action.payload;
+    },
     removeAll: (state) => {
       state.value = [];
     },
@@ -48,4 +51,5 @@ export const {
   decrementProducts,
   incrementProducts,
   removeAll,
+  setProductsFromlocalStorage,
 } = CartProductListSlice.actions;

@@ -4,7 +4,7 @@ export const CartToggleSlice = createSlice({
   name: "cart",
   initialState: { value: false },
   reducers: {
-    setCart: (state, action) => {
+    setCart: (state) => {
       state.value = !state.value;
     },
   },

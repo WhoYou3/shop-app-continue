@@ -3,6 +3,7 @@ import widthReducer from "./ScreenWidthSlice";
 import cartToggleReducer from "./CartToggleSlice";
 import productListReducer from "./CartProductListSlice";
 import quantityProductsReducer from "./QuantityProductsSlice";
+import submitFormSliceReducer from "./SubmitFormSlice";
 
 const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ const store = configureStore({
     cart: cartToggleReducer,
     productsList: productListReducer,
     quantityProducts: quantityProductsReducer,
+    submitFormAvaliable: submitFormSliceReducer,
   },
 });
 

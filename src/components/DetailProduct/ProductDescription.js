@@ -13,7 +13,6 @@ export default function ProductDescription(props) {
   const param = useParams();
 
   const createProductObject = (count) => {
-    console.log("tutaj");
     const product = {
       product: props.product,
       cost: props.cost * count,
@@ -22,7 +21,7 @@ export default function ProductDescription(props) {
       image: props.imgMOBILE,
       count: +count,
     };
-    console.log(product.cost);
+
     dispatch(setProductToList(product));
   };
 

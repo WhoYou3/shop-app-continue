@@ -15,6 +15,14 @@
   z-index: -1;
 }
 
+.container button {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5%;
+}
+
 .sectionMain button:hover {
   cursor: pointer;
 }
@@ -72,16 +80,26 @@
   }
 }
 
+@media (min-width: 800px) {
+  .container button {
+    bottom: 15%;
+  }
+}
+
 @media (min-width: 1100px) {
   .sectionMain {
     background-image: url("../../../source/starter-code/assets/home/desktop/image-hero.jpg");
     align-items: flex-start;
+  }
+  .container button {
+    bottom: 14%;
+    left: 20%;
   }
 
   .description {
     margin-left: 8%;
     width: 30%;
     text-align: start;
-    height: 50%;
+    height: 40%;
   }
 }

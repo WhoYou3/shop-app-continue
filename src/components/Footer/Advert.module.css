@@ -10,6 +10,7 @@
 
 .advert img {
   width: 100%;
+
   border-radius: 10px;
 }
 
@@ -37,7 +38,7 @@
   }
 
   .advert img {
-    height: 400px;
+    height: 300px;
   }
 }
 
@@ -47,7 +48,7 @@
     flex-direction: row-reverse;
   }
   .advert img {
-    width: 40%;
+    width: 450px;
   }
   .description {
     display: flex;

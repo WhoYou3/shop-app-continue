@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { setProductsFromlocalStorage } from "../../store/CartProductListSlice";
 import { setCart } from "../../store/CartToggleSlice";
 import { motion } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -19,12 +20,31 @@ function Navbar(props) {
   const quantityProducts = useSelector((state) => state.quantityProducts.value);
   const dispatch = useDispatch();
 
+  if (cartList.length < 1 && localStorage.getItem("products")) {
+    const arrayProducts = localStorage.getItem("products");
+
+    const productsFromLocalStorage = JSON.parse(arrayProducts);
+
+    dispatch(setProductsFromlocalStorage(productsFromLocalStorage));
+  }
+  if (quantityProducts) {
+    localStorage.setItem("quantity", quantityProducts);
+  }
+  let quantityFromLocalStorage = localStorage.getItem("quantity");
+
+  if (cartList.length > 0) {
+    const productsCart = JSON.stringify(cartList);
+    localStorage.setItem("products", productsCart);
+  }
+
   const showMenu = () => {
     setIsMenu(true);
+    document.body.style.overflow = "hidden";
   };
 
   const showCart = () => {
     dispatch(setCart());
+    document.body.style.overflow = "hidden";
   };
 
   return (
@@ -110,7 +130,7 @@ function Navbar(props) {
               exit={{ opacity: 0.5, transition: { duration: 2 } }}
               className={classes.shopQuantity}
             >
-              {quantityProducts}
+              {quantityFromLocalStorage}
             </motion.div>
           )}
         </Link>
@@ -119,13 +139,19 @@ function Navbar(props) {
 
       {isMenu && (
         <>
-          <div onClick={() => setIsMenu(false)} className={classes.menu}>
+          <div
+            onClick={() => {
+              setIsMenu(false);
+              document.body.style.overflow = "auto";
+            }}
+            className={classes.menu}
+          >
             <AiOutlineClose size={"3rem"} className={classes.closeIcon} />
             <ul>
+              <Link to="/headphones">Headphones</Link>
               <Link to="/">Home</Link>
-              <Link to="/Headphones">Headphones</Link>
-              <Link to="/Earphones">Earphones</Link>
-              <Link to="/G">Głosniki</Link>
+              <Link to="/earphones">Earphones</Link>
+              <Link to="/speakers">Speakers</Link>
             </ul>
           </div>
         </>
