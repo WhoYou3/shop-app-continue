@@ -15,6 +15,8 @@ export default function Summary(props) {
       totalPrize += product.cost;
     }
   }
+  console.log(buttonAvaliable);
+  console.log((summaryProducts.length > 0) + "tutaj");
   return (
     <div className={classes.summaryProducts}>
       <h3>SUMMARY</h3>
@@ -67,7 +69,7 @@ export default function Summary(props) {
                 ? "pointer"
                 : "default",
           }}
-          disabled={!buttonAvaliable && summaryProducts.length < 1}
+          disabled={!buttonAvaliable && !summaryProducts.length > 0}
           onClick={props.showSuccessfullContentHandler}
         >
           CONTINUE & PAY
