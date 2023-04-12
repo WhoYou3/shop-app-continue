@@ -1,7 +1,7 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import classes from "./Advert.module.css";
 import advertJPG from "../../images/MOBILE/image-best-gear.jpg";
-import { useLocation } from "react-router-dom";
 
 export default function Advert() {
   const location = useLocation();

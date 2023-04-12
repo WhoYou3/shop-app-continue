@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setWidth as widthSetting } from "../store/ScreenWidthSlice";
 
 import Advert from "../components/Footer/Advert";
@@ -9,7 +9,7 @@ import NavFooter from "../components/Footer/NavFooter";
 import Navbar from "../components/Navbar/Navbar";
 import classes from "./Layout.module.css";
 
-function Layout(props) {
+function Layout() {
   const [width, setWidth] = useState(window.innerWidth);
   const dispatch = useDispatch();
 

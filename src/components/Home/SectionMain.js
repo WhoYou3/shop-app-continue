@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../UI/Button";
 import classes from "./SectionMain.module.css";
 
-function SectionMain(props) {
+function SectionMain() {
   return (
     <>
       <section className={classes.sectionMain}>

@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
 import classes from "./Summary.module.css";
 
 export default function Summary(props) {
@@ -16,8 +15,6 @@ export default function Summary(props) {
     }
   }
 
-  const disabledButton = !buttonAvaliable && !summaryProducts.length > 0;
-  console.log(disabledButton + "tutaj");
   return (
     <div className={classes.summaryProducts}>
       <h3>SUMMARY</h3>
@@ -70,7 +67,9 @@ export default function Summary(props) {
                 ? "pointer"
                 : "default",
           }}
-          disabled={disabledButton ? true : false}
+          disabled={
+            buttonAvaliable && summaryProducts.length > 0 ? false : true
+          }
           onClick={props.showSuccessfullContentHandler}
         >
           CONTINUE & PAY

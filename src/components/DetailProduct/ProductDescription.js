@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { motion } from "framer-motion";
-import AddToCart from "./AddToCart";
 import { setProductToList } from "../../store/CartProductListSlice";
+import AddToCart from "./AddToCart";
 import classes from "./ProductDescription.module.css";
 
 export default function ProductDescription(props) {

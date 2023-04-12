@@ -1,8 +1,8 @@
 import PrimaryProduct from "./PrimaryProduct";
 import SecondaryProduct from "./SecondaryProduct";
+import ThirdProduct from "./ThirdProduct";
 
 import classes from "./SectionSpecificProduct.module.css";
-import ThirdProduct from "./ThirdProduct";
 
 const descripPrimaryProduct =
   "Uprade to premium speakers that are phenomenally built to delivertruly remarkable sound";

@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import classes from "./Products.module.css";
 import Product from "../components/Products/Product";
 import SectionKidOfProducts from "../components/Home/SectionKindOfProducts";
 import DUMMY_BACKEND from "../DUMMY_BACKEND/DUMMY_BACKEND";
+import classes from "./Products.module.css";
 
 function Products() {
   const param = useParams();

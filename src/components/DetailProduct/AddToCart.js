@@ -1,16 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
 import { setQuantity } from "../../store/QuantityProductsSlice";
-
 import { motion } from "framer-motion";
 import classes from "./AddToCart.module.css";
 
 export default function AddToCart(props) {
   const [isAnimating, setIsAnimating] = useState(false);
   const [value, setValue] = useState(1);
-
   const productsCartList = useSelector((state) => state.productsList.value);
   const dispatch = useDispatch();
 

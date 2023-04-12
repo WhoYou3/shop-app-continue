@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import ProductDescription from "../components/DetailProduct/ProductDescription";
-
 import DUMMY_BACKEND from "../DUMMY_BACKEND/DUMMY_BACKEND";
 import classes from "./DetailProduct.module.css";
 
@@ -24,6 +23,7 @@ export default function DetailProduct() {
           />
         );
       }
+      return null;
     });
   }
   if (param.products === "earphones") {
@@ -41,6 +41,7 @@ export default function DetailProduct() {
           />
         );
       }
+      return null;
     });
   }
   if (param.products === "speakers") {
@@ -58,6 +59,7 @@ export default function DetailProduct() {
           />
         );
       }
+      return null;
     });
   }
 

@@ -1,11 +1,9 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-
-import classes from "./PrimaryProduct.module.css";
 import Button from "../UI/Button";
 import jpg from "../../images/MOBILE/image-speaker-zx9.png";
 import jpgDesktop from "../../images/MOBILE/image-speaker-zx9.png";
+import classes from "./PrimaryProduct.module.css";
 
 export default function SpecificProduct(props) {
   const widthChecker = useSelector((state) => state.width);

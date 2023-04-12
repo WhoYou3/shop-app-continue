@@ -1,7 +1,8 @@
 import React from "react";
 import { GrStatusGood } from "react-icons/gr";
 import classes from "./SuccessfullOrder.module.css";
-export default function SuccessfullOrder(props) {
+
+export default function SuccessfullOrder() {
   return (
     <div className={classes.succcessfullOrder}>
       <div className={classes.successfullOrderCart}>

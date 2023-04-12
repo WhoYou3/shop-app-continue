@@ -1,14 +1,13 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { setSubmitAvaliable } from "../../store/SubmitFormSlice";
 import { Link } from "react-router-dom";
+import { setSubmitAvaliable } from "../../store/SubmitFormSlice";
 import useInput from "../../hooks/use-input";
 import classes from "./Form.module.css";
 
 export default function Form() {
   const dispatch = useDispatch();
   const {
-    value: enteredNameValue,
     isValid: enteredNameIsValid,
     hasError: hasNameError,
     valueChangeHandler: nameChangeHandler,
@@ -16,7 +15,6 @@ export default function Form() {
   } = useInput((enteredNameValue) => enteredNameValue.trim() !== "");
 
   const {
-    value: enteredEmailAddres,
     isValid: enteredEmailIsValid,
     hasError: hasEmailError,
     valueChangeHandler: emailChangeHandler,
@@ -24,7 +22,6 @@ export default function Form() {
   } = useInput((enteredEmailAddres) => enteredEmailAddres.includes("@"));
 
   const {
-    value: enteredPhoneNumber,
     isValid: enteredPhoneNumberIsValid,
     hasError: hasPhoneError,
     valueChangeHandler: phoneChangeHandler,
@@ -32,28 +29,24 @@ export default function Form() {
   } = useInput((enteredPhoneNumber) => enteredPhoneNumber.length === 9);
 
   const {
-    value: enteredAddresValue,
     isValid: enteredAddresIsValid,
     hasError: hasAddresError,
     valueChangeHandler: addresChangeHandler,
     inputBlurHandler: addresBlurHandler,
   } = useInput((enteredAddresValue) => enteredAddresValue.trim() !== "");
   const {
-    value: enteredZIP,
     isValid: eneteredZIPisValid,
     hasError: hasZIPError,
     valueChangeHandler: zipChangeHandler,
     inputBlurHandler: zipBlurHandler,
   } = useInput((enteredZIP) => enteredZIP.length === 5);
   const {
-    value: enteredCity,
     isValid: enteredCityIsValid,
     hasError: hasCityError,
     valueChangeHandler: cityChangeHandler,
     inputBlurHandler: cityBlurHandler,
   } = useInput((enteredCity) => enteredCity.trim() !== "");
   const {
-    value: enteredCountry,
     isValid: enteredCountryIsValid,
     hasError: hasCountryError,
     valueChangeHandler: countryChangeHandler,

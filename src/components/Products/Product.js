@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
-
 import Button from "../UI/Button";
 import classes from "./Products.module.css";
 

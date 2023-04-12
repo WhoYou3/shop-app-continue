@@ -1,8 +1,8 @@
 import React from "react";
+import { motion } from "framer-motion";
 import SectionMain from "../components/Home/SectionMain";
 import SectionKindOfProducts from "../components/Home/SectionKindOfProducts";
 import SectionSpecificProduct from "../components/Home/SectionSpecificProduct";
-import { motion } from "framer-motion";
 
 function Home(props) {
   document.body.style.overflow = "auto";

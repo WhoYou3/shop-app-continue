@@ -1,9 +1,9 @@
 import React from "react";
 import KindOfProduct from "./KindOfProduct";
-import classes from "./SectionProducts.module.css";
 import earphonesPNG from "../../images/image-category-thumbnail-earphones.png";
 import headphonesPNG from "../../images/image-category-thumbnail-headphones.png";
 import speakersPNG from "../../images/image-category-thumbnail-speakers.png";
+import classes from "./SectionProducts.module.css";
 
 const KINDOFPRODUCTS = {
   EARPHONES: "EARPHONES",

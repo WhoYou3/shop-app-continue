@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FiShoppingCart } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
-import classes from "./Navbar.module.css";
 import Cart from "../Cart/Cart";
+import classes from "./Navbar.module.css";
 
 function Navbar(props) {
   const [isMenu, setIsMenu] = useState(false);
@@ -148,8 +148,8 @@ function Navbar(props) {
           >
             <AiOutlineClose size={"3rem"} className={classes.closeIcon} />
             <ul>
-              <Link to="/headphones">Headphones</Link>
               <Link to="/">Home</Link>
+              <Link to="/headphones">Headphones</Link>
               <Link to="/earphones">Earphones</Link>
               <Link to="/speakers">Speakers</Link>
             </ul>

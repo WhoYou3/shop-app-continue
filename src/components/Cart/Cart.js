@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import { useSelector, useDispatch } from "react-redux";
-import { setCart } from "../../store/CartToggleSlice";
 import { motion } from "framer-motion";
 import {
   incrementProducts,
   decrementProducts,
   removeAll,
 } from "../../store/CartProductListSlice";
+import { setCart } from "../../store/CartToggleSlice";
 import classes from "./Cart.module.css";
 
 export default function Cart(props) {

@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import classes from "./NavFooter.module.css";
 import { AiFillFacebook } from "react-icons/ai";
 import { CiTwitter } from "react-icons/ci";
 import { AiOutlineInstagram } from "react-icons/ai";
+import classes from "./NavFooter.module.css";
 
 export default function NavFooter() {
   return (
