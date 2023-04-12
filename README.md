@@ -6,7 +6,7 @@
  <li>React</li>
  <li>Redux/toolkit</li>
  <li>React-router-dom</li>
- <li>CSS with BEM methodology</li>
+ <li>CSS modules</li>
 </ul>
 
 <h3>How to run ? </h3>
