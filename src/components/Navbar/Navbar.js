@@ -57,7 +57,7 @@ function Navbar(props) {
       >
         {widthChecker < 1024 ? (
           <RxHamburgerMenu
-            className={classes.iconMenu}
+            className={classes.iconMenu + " hambuerger"}
             onClick={showMenu}
             size={"2rem"}
           />

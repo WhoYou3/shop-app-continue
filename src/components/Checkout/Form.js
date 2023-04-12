@@ -80,8 +80,10 @@ export default function Form() {
             <div className={classes.description}>
               <p>BILING DETAILS</p>
               <div className={classes.inputContainer}>
-                <label>Name</label>
+                <label for="name">Name</label>
                 <input
+                  id="name"
+                  type="name"
                   style={{ border: hasNameError ? "1px red solid" : null }}
                   onBlur={nameBlurHandler}
                   onChange={nameChangeHandler}
@@ -92,8 +94,10 @@ export default function Form() {
                 ) : null}
               </div>
               <div className={classes.inputContainer}>
-                <label>Email Addres</label>
+                <label for="email">Email Addres</label>
                 <input
+                  id="email"
+                  type="email"
                   style={{ border: hasEmailError ? "1px red solid" : null }}
                   onChange={emailChangeHandler}
                   onBlur={emailBlurHandler}
@@ -106,8 +110,9 @@ export default function Form() {
                 )}
               </div>
               <div className={classes.inputContainer}>
-                <label>Phone number</label>
+                <label for="phone">Phone number</label>
                 <input
+                  id="phone"
                   style={{ border: hasPhoneError ? "1px red solid" : null }}
                   onBlur={phoneBlurHandler}
                   onChange={phoneChangeHandler}
@@ -123,8 +128,9 @@ export default function Form() {
               <div className={classes.description}>
                 <p>SHIPPING INFO</p>
                 <div className={classes.inputContainer}>
-                  <label>Your addres</label>
+                  <label for="addres">Your addres</label>
                   <input
+                    id="addres"
                     style={{ border: hasAddresError ? "1px red solid" : null }}
                     onBlur={addresBlurHandler}
                     onChange={addresChangeHandler}
@@ -136,8 +142,9 @@ export default function Form() {
                   ) : null}
                 </div>
                 <div className={classes.inputContainer}>
-                  <label>ZIP CODE</label>
+                  <label for="zipcode">ZIP CODE</label>
                   <input
+                    id="zipcode"
                     style={{ border: hasZIPError ? "1px red solid" : null }}
                     type="number"
                     onBlur={zipBlurHandler}
@@ -149,9 +156,10 @@ export default function Form() {
                   ) : null}
                 </div>
                 <div className={classes.inputContainer}>
-                  <label>City</label>
+                  <label for="city">City</label>
 
                   <input
+                    id="city"
                     style={{ border: hasCityError ? "1px red solid" : null }}
                     onBlur={cityBlurHandler}
                     onChange={cityChangeHandler}
@@ -162,8 +170,9 @@ export default function Form() {
                   ) : null}
                 </div>
                 <div className={classes.inputContainer}>
-                  <label>Country</label>
+                  <label for="country">Country</label>
                   <input
+                    id="country"
                     style={{ border: hasCountryError ? "1px red solid" : null }}
                     onBlur={countryBlurHandler}
                     onChange={countryChangeHandler}
