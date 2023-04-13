@@ -11,13 +11,13 @@ describe("navbar navigation", () => {
     cy.get(".Products_products__4gtdL").contains("HEADPHONES");
     cy.url().should("eq", "http://localhost:3000/headphones");
   });
-  it("Earphones dispaly after clicked headphones link", () => {
+  it("Earphones dispaly after clicked earphones link", () => {
     cy.viewport(1030, 800);
     cy.get(".Navbar_navLinks__FdwH-").contains("EARPHONES").click();
     cy.get(".Products_products__4gtdL").contains("EARPHONES");
     cy.url().should("eq", "http://localhost:3000/earphones");
   });
-  it("Headphones dispaly after clicked headphones link", () => {
+  it("Headphones dispaly after clicked speakers link", () => {
     cy.viewport(1030, 800);
     cy.get(".Navbar_navLinks__FdwH-").contains("SPEAKERS").click();
     cy.get(".Products_products__4gtdL").contains("SPEAKERS");
